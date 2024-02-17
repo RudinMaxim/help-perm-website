@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import './globals.scss';
 import { getMetadata } from '@/lib/helper/getMetadata';
+import { Header } from '@/components/Header/Header';
 
-const inter = Inter({ subsets: ['latin'] });
+const montserrat = Montserrat({ subsets: ['latin'], weight: '400' });
 
 export const metadata: Metadata = getMetadata({});
 
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru'>
-			<body className={inter.className}>{children}</body>
+			<body className={montserrat.className}>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 }
