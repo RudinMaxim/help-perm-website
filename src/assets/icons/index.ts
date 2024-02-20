@@ -1,3 +1,3 @@
 import arrowToRight from './arrowToRight.svg';
-
-export { arrowToRight };
+import close from './close.svg';
+export { arrowToRight, close };

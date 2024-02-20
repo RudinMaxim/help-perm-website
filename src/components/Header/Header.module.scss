@@ -10,8 +10,28 @@
 	justify-content: space-between;
 	padding: 1rem 0;
 
+	.HeaderContent {
+		display: flex;
+		gap: 1rem;
+		font-size: 1rem;
+		.Location {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			white-space: nowrap;
+			gap: 0.25rem;
+			font-weight: 500;
+			color: var(--secondary-color);
+		}
+	}
+
 	@media (max-width: 768px) {
 		padding: 0.75rem 0;
+
+		.HeaderContent {
+			flex-direction: column;
+			gap: 0.25rem;
+		}
 	}
 }
 
@@ -61,5 +81,9 @@
 				}
 			}
 		}
+	}
+	@media (max-width: 768px) {
+		flex-direction: column-reverse;
+		gap: 0.25rem;
 	}
 }
