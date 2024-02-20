@@ -1,3 +1,4 @@
+import { Assistance } from './Assistance/Assistance';
 import { NotFoundAlert } from './NotFoundAlert/NotFoundAlert';
 
-export { NotFoundAlert };
+export { Assistance, NotFoundAlert };

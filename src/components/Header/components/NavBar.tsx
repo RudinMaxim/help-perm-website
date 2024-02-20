@@ -1,5 +1,5 @@
-import { HelpButton } from '@/components';
 import { pagesMap } from '@/lib/constants/page';
+import { Assistance } from '@/module';
 import Link from 'next/link';
 import style from '../Header.module.scss';
 
@@ -17,7 +17,7 @@ export function NavBar() {
 						))}
 				</ul>
 			</nav>
-			<HelpButton />
+			<Assistance />
 		</div>
 	);
 }

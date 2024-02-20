@@ -4,7 +4,7 @@ import style from './Logo.module.scss';
 export function Logo() {
 	return (
 		<Link href={'/'} aria-label='Помощь Пермь' className={style.Logo}>
-			Помощь Пермь
+			Помощь
 		</Link>
 	);
 }
