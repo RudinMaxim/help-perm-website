@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import '../../app/globals.scss';
 
 export function Container({ children }: { children: React.ReactNode }) {

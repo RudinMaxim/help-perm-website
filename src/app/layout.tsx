@@ -1,8 +1,8 @@
+import { Header } from '@/components/Header/Header';
+import { getMetadata } from '@/lib/helper/getMetadata';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import './globals.scss';
-import { getMetadata } from '@/lib/helper/getMetadata';
-import { Header } from '@/components/Header/Header';
 
 const montserrat = Montserrat({ subsets: ['latin'], weight: '400' });
 
@@ -18,6 +18,8 @@ export default function RootLayout({
 			<body className={montserrat.className}>
 				<Header />
 				{children}
+
+				{/* <ScrollButton /> */}
 			</body>
 		</html>
 	);

@@ -1,0 +1,26 @@
+.scroll__button {
+  position: fixed;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
+  z-index: 100;
+
+  .progress_value {
+    display: block;
+    height: calc(100% - 1rem);
+    width: calc(100% - 1rem);
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+  }
+
+  img {
+    -webkit-transform: rotate(90deg) scaleX(-1);
+    -ms-transform: rotate(90deg) scaleX(-1);
+    transform: rotate(90deg) scaleX(-1);
+  }
+}
