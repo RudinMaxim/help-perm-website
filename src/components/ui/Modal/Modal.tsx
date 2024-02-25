@@ -1,8 +1,8 @@
 import { close } from '@/assets/icons';
 import { AnimatePresence, motion } from 'framer-motion';
-import Image from 'next/image';
 import React from 'react';
 import { createPortal } from 'react-dom';
+import { ButtonIcon } from '..';
 import { IModal, useModal } from './Modal.hook';
 import style from './Modal.module.scss';
 
@@ -21,6 +21,7 @@ export function Modal({
 
 	return createPortal(
 		<AnimatedModal>
+			{/* @ts-ignore */}
 			<ModalContent {...{ handleClick, styles, children, title }} />
 		</AnimatedModal>,
 		document.body
@@ -43,7 +44,9 @@ function AnimatedModal({ children }: { children: React.ReactNode }) {
 function ModalContent(props: {
 	children: React.ReactNode;
 	title?: string;
-	handleClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
+	handleClick: (
+		event: React.MouseEvent<HTMLButtonElement | HTMLDivElement>
+	) => void;
 	styles: string;
 }) {
 	const { children, title, handleClick, styles } = props;
@@ -51,14 +54,19 @@ function ModalContent(props: {
 	return (
 		<div
 			className={styles}
-			onClick={handleClick}
+			onClick={(event) => handleClick(event)}
 			aria-modal='true'
 			role='dialog'
-			tabIndex={5}>
+			tabIndex={1}>
 			<div className={style.ModalContent}>
 				<div className={style.ModalHeader}>
 					{title && <h3>{title}</h3>}
-					<Image src={close} alt='Иконка закрытия' onClick={handleClick} />
+
+					<ButtonIcon
+						icon={close}
+						onClick={(event) => handleClick(event)}
+						className={style.closeIcon}
+					/>
 				</div>
 				{children}
 			</div>

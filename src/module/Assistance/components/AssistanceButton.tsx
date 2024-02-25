@@ -1,7 +1,6 @@
-'use client';
 import { FaShieldAlt } from 'react-icons/fa';
 import { Button } from '../../../components/ui';
-import { IAssistance } from '../Assistance.hook';
+import { IAssistance } from '../Assistance';
 
 export function AssistanceButton(props: IAssistance) {
 	const { toggetModal } = props;

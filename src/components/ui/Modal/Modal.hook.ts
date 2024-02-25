@@ -12,7 +12,9 @@ export const useModal = (props: IModal) => {
 
 	const styles = isMobile ? style.ModalMobile : style.ModalDesktop;
 
-	const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {
+	const handleClick: React.MouseEventHandler<HTMLButtonElement> = (
+		event: React.MouseEvent<HTMLButtonElement>
+	) => {
 		if (event.target === event.currentTarget) {
 			SwitchModal();
 		}
