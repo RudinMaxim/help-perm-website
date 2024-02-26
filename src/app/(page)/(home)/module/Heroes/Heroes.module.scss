@@ -1,0 +1,74 @@
+.Heroes {
+	padding: 2rem;
+	height: 70dvh;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+
+	background: url('../../../../../assets/photo/home.jpg'), no-repeat;
+	background-color: #ccc;
+	background-position: center center;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	.Heroes__main__row {
+		margin: auto 0;
+		h1 {
+			font-size: 4rem;
+			color: var(--bg-color);
+		}
+		p,
+		svg {
+			font-size: 1.5rem;
+			font-weight: 600;
+			opacity: 0.8;
+			text-transform: uppercase;
+		}
+	}
+	.Heroes__second__row {
+		.Heroes__second__row_top {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 1rem;
+		}
+	}
+}
+.Location {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+@media screen and (max-width: 768px) {
+	.Heroes {
+		.Heroes__main__row {
+			h1 {
+				font-size: 3rem;
+			}
+			p {
+				font-size: 1rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 425px) {
+	.Heroes {
+		.Heroes__main__row {
+			h1 {
+				font-size: 2rem;
+			}
+			p,
+			svg {
+				font-size: 0.75rem;
+			}
+		}
+	}
+}

@@ -16,6 +16,10 @@
 		--text-color: #fafafa;
 	}
 }
+::selection {
+	color: var(--bg-color);
+	background-color: var(--primary-color);
+}
 
 *,
 *::after,
@@ -24,6 +28,7 @@
 	padding: 0;
 	border: 0;
 	outline: 0;
+	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 ol,
@@ -40,7 +45,6 @@ html {
 	position: relative;
 	font-size: 18px;
 	font-weight: 400;
-	box-sizing: border-box;
 	background: var(--bg-color);
 	color: var(--text-color);
 }

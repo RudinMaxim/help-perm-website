@@ -1,3 +1,5 @@
+'use client';
+
 import { close } from '@/assets/icons';
 import { AnimatePresence, motion } from 'framer-motion';
 import React from 'react';

@@ -1,3 +1,3 @@
-import { Hero } from './Hero/Hero';
+import { Heroes } from './Heroes/Heroes';
 
-export { Hero };
+export { Heroes };

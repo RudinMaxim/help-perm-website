@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import style from './Button.module.scss';
 
 interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -44,5 +45,19 @@ export function ButtonIcon({ icon, onClick, ...rest }: IButtonIcon) {
 			{/* @ts-ignore */}
 			<Image src={icon} alt={'ButtonIcon'} onClick={onClick} />
 		</button>
+	);
+}
+
+interface IButtonLink {
+	children: React.ReactNode;
+	href: string;
+	target?: '_blank' | '_parent' | '_self' | '_top';
+}
+
+export function ButtonLink({ children, href, target = '_self' }: IButtonLink) {
+	return (
+		<Link href={href} className={style.ButtonLink} target={target}>
+			{children}
+		</Link>
 	);
 }

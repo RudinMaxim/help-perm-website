@@ -1,3 +1,5 @@
+'use client';
+
 import { Modal } from '@/components/ui';
 import { IAssistance } from '../Assistance';
 import style from '../Assistance.module.scss';

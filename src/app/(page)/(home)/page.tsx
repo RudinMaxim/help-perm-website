@@ -1,3 +1,9 @@
+import { Heroes } from './module';
+
 export default function Home() {
-	return <main></main>;
+	return (
+		<main>
+			<Heroes />
+		</main>
+	);
 }

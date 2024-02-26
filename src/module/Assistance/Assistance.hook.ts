@@ -1,3 +1,4 @@
+'use client';
 import { useWindowSize } from '@/lib/hook/useWindowSize';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
