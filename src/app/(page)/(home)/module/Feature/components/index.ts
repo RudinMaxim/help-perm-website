@@ -1,3 +1,4 @@
+import { HowHelp } from './HowHelp';
 import { Solution } from './Solution';
 
-export { Solution };
+export { HowHelp, Solution };
