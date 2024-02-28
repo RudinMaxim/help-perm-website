@@ -2,7 +2,6 @@
 	margin-top: 2rem;
 
 	p {
-		text-align: center;
 		font-size: 1.5rem;
 		font-weight: 600;
 	}
@@ -26,6 +25,7 @@
 
 			.solution__block_text {
 				max-width: 50%;
+
 				h3 {
 					font-size: 2rem;
 					font-weight: 600;
@@ -112,7 +112,7 @@
 			margin-bottom: 1rem;
 			color: var(--primary-color);
 		}
-		ul {
+		.HowHelpList {
 			width: 100%;
 			li {
 				font-size: 1.25rem;
@@ -130,12 +130,28 @@
 				}
 				span {
 					text-align: center;
-					min-width: 1rem;
 					padding: 0.5rem 0.75rem;
 					border-radius: 50%;
 					border: 1px solid var(--text-color);
 				}
+				p {
+					font-size: 1.5rem;
+				}
 			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.HowHelpRowe {
+		flex-direction: column;
+		align-items: flex-start !important;
+	}
+}
+@media screen and (max-width: 768px) {
+	.HowHelp {
+		h2 {
+			text-align: center;
+			font-size: 2.5rem !important;
 		}
 	}
 }

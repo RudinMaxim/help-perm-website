@@ -19,7 +19,7 @@ export function Heroes() {
 				<div className={style.Heroes__second__row}>
 					<div className={style.Heroes__second__row_top}>
 						<Assistance />
-						<ButtonLink href='#'>Помочь себе</ButtonLink>
+						<ButtonLink href='/help-myself'>Помочь себе</ButtonLink>
 					</div>
 				</div>
 			</div>
@@ -31,7 +31,7 @@ export function Location() {
 	return (
 		<div className={style.Location}>
 			<FaLocationDot />
-			<p>Пермский край</p>
+			<p>Мы поможем</p>
 		</div>
 	);
 }

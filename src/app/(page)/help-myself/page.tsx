@@ -2,9 +2,9 @@ import { getMetadata } from '@/lib/helper/getMetadata';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = getMetadata({
-	title: 'Контакты',
+	title: 'Как помочь себе, в трудной ситуацией',
 });
 
-export default function contacts() {
+export default function HelpMyself() {
 	return <main>HI</main>;
 }

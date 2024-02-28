@@ -3,13 +3,9 @@ import style from '../Feature.module.scss';
 
 export function HowHelp() {
 	return (
-		<section className={style.HowHelp} id='ForMasterHowWork'>
+		<section className={style.HowHelp} id='HowHelp'>
 			<div className={style.HowHelpRowe}>
-				<h2>
-					Способы
-					<br />
-					получение <br /> помощи{' '}
-				</h2>
+				<h2>Способы получение помощи </h2>
 
 				<HowHelpList />
 			</div>
@@ -19,9 +15,9 @@ export function HowHelp() {
 
 function HowHelpList() {
 	return (
-		<ul>
+		<ul className={style.HowHelpList}>
 			{howHelp.map((item, index) => (
-				<li key={`HowHelpList_item`}>
+				<li key={`HowHelpList_${item}`}>
 					<span>{index + 1}</span>
 					<p>{item};</p>
 				</li>

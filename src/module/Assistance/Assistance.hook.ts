@@ -2,12 +2,34 @@
 import { useWindowSize } from '@/lib/hook/useWindowSize';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
 import {
-	FormSchemaAssistance,
-	IAssistance,
-	schemaAssistance,
-} from './Assistance';
+	FieldErrors,
+	UseFormHandleSubmit,
+	UseFormRegister,
+	useForm,
+} from 'react-hook-form';
+import { z } from 'zod';
+
+export const schemaAssistance = z.object({
+	name: z.string(),
+	phone: z.string().min(10).max(11),
+	subject: z.string(),
+	message: z.string(),
+});
+
+export type FormSchemaAssistance = z.infer<typeof schemaAssistance>;
+
+export interface IAssistance {
+	toggetModal: () => void;
+	isOpen: boolean;
+	setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+	isMobile: boolean;
+	register: UseFormRegister<FormSchemaAssistance>;
+	handleSubmit: UseFormHandleSubmit<FormSchemaAssistance>;
+	onSubmit: (data: FormSchemaAssistance) => void;
+	errors: FieldErrors<FormSchemaAssistance>;
+	isSubmitting: boolean;
+}
 
 export const useAssistance = (): IAssistance => {
 	const [isOpen, setIsOpen] = useState(false);

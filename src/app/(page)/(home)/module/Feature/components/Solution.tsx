@@ -23,7 +23,7 @@ export function Solution() {
 }
 function SolutionBlock(props: IFEATURE_PAGE) {
 	const { title, description, img } = props;
-	const image = img ? img : camera;
+	const image = img ? `${img}` : camera;
 
 	return (
 		<li className={style.solution__block}>
@@ -31,7 +31,13 @@ function SolutionBlock(props: IFEATURE_PAGE) {
 				<h3>{title}</h3>
 				<p>{description}</p>
 			</div>
-			<Image src={image} alt={`Изображение к ${title}`} priority />
+			<Image
+				src={image}
+				alt={`Изображение к ${title}`}
+				width={500}
+				height={500}
+				priority
+			/>
 		</li>
 	);
 }
