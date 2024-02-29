@@ -8,15 +8,15 @@ export const pagesMap: Array<IPagesMap> = [
 		url: '/',
 	},
 	{
-		name: 'Помощь себе',
-		url: '/help-myself',
-	},
-	{
 		name: 'О нас',
 		url: '/about-us',
 	},
-	// {
-	// 	name: 'Контакты',
-	// 	url: '/contacts',
-	// },
+	{
+		name: 'Документы',
+		url: '/documentation',
+	},
+	{
+		name: 'Помощь себе',
+		url: '/help-myself',
+	},
 ];

@@ -1,5 +1,6 @@
 import { howHelp } from '@/lib/constants/content';
-import style from '../Feature.module.scss';
+import { Assistance } from '@/module';
+import style from './HowHelp.module.scss';
 
 export function HowHelp() {
 	return (
@@ -22,7 +23,7 @@ function HowHelpList() {
 					<p>{item};</p>
 				</li>
 			))}
-			<li></li>
+			<Assistance />
 		</ul>
 	);
 }

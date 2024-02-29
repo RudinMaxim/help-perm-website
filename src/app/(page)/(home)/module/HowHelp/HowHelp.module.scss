@@ -1,0 +1,73 @@
+.HowHelp {
+	margin: 2rem 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+
+	.HowHelpRowe {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		gap: 2rem;
+	}
+
+	h2 {
+		font-size: 4rem;
+		margin-bottom: 1rem;
+		color: var(--primary-color);
+	}
+	.HowHelpList {
+		width: 100%;
+		li {
+			font-size: 1.25rem;
+			margin-bottom: 0.75rem;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			gap: 0.5rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+			span {
+				text-align: center;
+				padding: 0.5rem 0.75rem;
+				border-radius: 50%;
+				border: 1px solid var(--text-color);
+			}
+			p {
+				font-size: 1.5rem;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.HowHelpRowe {
+		flex-direction: column;
+		align-items: flex-start !important;
+	}
+}
+@media screen and (max-width: 768px) {
+	.HowHelp {
+		h2 {
+			text-align: center;
+			font-size: 2.5rem !important;
+		}
+	}
+}
