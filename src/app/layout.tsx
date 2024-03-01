@@ -1,5 +1,5 @@
+import { Header, ScrollButton } from '@/components';
 import { Footer } from '@/components/Footer/Footer';
-import { Header } from '@/components/Header/Header';
 import { getMetadata } from '@/lib/helper/getMetadata';
 import { LeadForm } from '@/module/LedForm/LeadForm';
 import type { Metadata } from 'next';
@@ -19,10 +19,10 @@ export default function RootLayout({
 		<html lang='ru'>
 			<body className={montserrat.className}>
 				<Header />
-				{children}
+				<main>{children}</main>
 				<LeadForm />
 				<Footer />
-				{/* <ScrollButton /> */}
+				<ScrollButton location={{ left: '1rem', bottom: '1rem' }} />
 			</body>
 		</html>
 	);

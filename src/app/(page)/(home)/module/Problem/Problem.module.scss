@@ -1,0 +1,84 @@
+.Problem {
+	box-sizing: border-box;
+	h2 {
+		margin-top: 3rem;
+		margin-bottom: 4rem;
+		font-size: 2rem;
+		color: var(--primary-color);
+		text-align: center;
+	}
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+
+		.Card {
+			max-width: 40%;
+			box-shadow: var(--box-shadow);
+			border-radius: var(--border-radius);
+
+			margin: 0 auto;
+
+			.card_top {
+				padding: 1rem;
+				position: relative;
+				border-bottom: 2px solid #ccc;
+				text-align: end;
+				p {
+					font-weight: 600;
+				}
+				.icon {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					position: absolute;
+					top: 40%;
+					padding: 1.5rem;
+					border-radius: 50%;
+					color: var(--bg-color);
+					background-color: var(--primary-color);
+					transition: var(--transition);
+					cursor: pointer;
+
+					@media (hover: hover) {
+						&:hover,
+						&:focus {
+							background-color: var(--secondary-color);
+						}
+					}
+
+					@media (hover: none) {
+						&:active,
+						&:focus {
+							background-color: var(--secondary-color);
+						}
+					}
+				}
+			}
+			.card_body {
+				margin-top: 1rem;
+				padding: 1rem;
+				p {
+					text-align: justify;
+				}
+				h3 {
+					font-weight: 600;
+					color: var(--primary-color);
+					margin-bottom: 1rem;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 768px) {
+	.Card {
+		max-width: 45% !important;
+	}
+}
+
+@media screen and (max-width: 638px) {
+	.Card {
+		max-width: 100% !important;
+	}
+}

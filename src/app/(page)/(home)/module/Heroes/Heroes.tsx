@@ -31,7 +31,7 @@ export function Location() {
 	return (
 		<div className={style.Location}>
 			<FaLocationDot />
-			<p>Мы поможем</p>
+			<p>Место где помогут </p>
 		</div>
 	);
 }

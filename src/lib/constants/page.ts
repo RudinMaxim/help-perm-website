@@ -12,11 +12,11 @@ export const pagesMap: Array<IPagesMap> = [
 		url: '/about-us',
 	},
 	{
-		name: 'Документы',
-		url: '/documentation',
-	},
-	{
 		name: 'Помощь себе',
 		url: '/help-myself',
 	},
+	// {
+	// 	name: 'Документы',
+	// 	url: '/documentation',
+	// },
 ];

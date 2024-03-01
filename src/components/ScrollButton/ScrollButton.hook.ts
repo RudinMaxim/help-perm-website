@@ -35,7 +35,7 @@ export const useScrollButton = (props: IScrollButton) => {
 
 	const stylesObject = {
 		display: showProgress ? 'grid' : 'none',
-		background: `conic-gradient(var(--text-color) ${scrollProgress}%, var(--primary-color) ${scrollProgress}%)`,
+		background: `conic-gradient(var(--primary-color) ${scrollProgress}%, var(--bg-color) ${scrollProgress}%)`,
 		left: location?.left,
 		right: location?.right,
 		top: location?.top,
