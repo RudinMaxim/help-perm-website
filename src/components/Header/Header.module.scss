@@ -9,9 +9,11 @@
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	padding: 1rem 0;
+	width: 100%;
 
 	.HeaderContent {
 		display: flex;
+		align-items: center;
 		gap: 1rem;
 		font-size: 1rem;
 	}
@@ -20,15 +22,30 @@
 		padding: 0.75rem 0;
 
 		.HeaderContent {
-			flex-direction: column;
-			gap: 0.25rem;
+			.HeaderContentBar {
+				display: none;
+			}
 		}
+	}
+}
+.NavSecond {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.NavMain {
+		display: none;
+	}
+	.NavSecond {
+		display: block !important;
+		text-align: start;
 	}
 }
 
 .NavBarWrapper {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 1rem;
 
 	@media (max-width: 768px) {

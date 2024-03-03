@@ -1,3 +1,4 @@
 import { NavBar } from './NavBar';
+import { MobileMenu } from './mobileMenu';
 
-export { NavBar };
+export { MobileMenu, NavBar };

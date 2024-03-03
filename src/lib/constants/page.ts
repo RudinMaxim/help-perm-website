@@ -15,8 +15,8 @@ export const pagesMap: Array<IPagesMap> = [
 		name: 'Помощь себе',
 		url: '/help-myself',
 	},
-	// {
-	// 	name: 'Документы',
-	// 	url: '/documentation',
-	// },
+	{
+		name: 'Документы',
+		url: '/documentation',
+	},
 ];
